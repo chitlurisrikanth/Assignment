@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+	<browser>chrome</browser>
+	<home>
+		<signin locator="id"></signin>
+	</home>
+	<signin>
+		<data></data>
+		<begin_form_username_class locator="xpath">//*[@id='login_form']//div//div[contains(@class\,'form-group')and not(contains(@class\,'form-ok'))]//input[@id='email']</begin_form_username_class>
+		<invalid_username_class locator="xpath">//div[contains(@class\, 'form-error')]</invalid_username_class>
+		
+		<name_error_message locator="xpath">//div[contains(@class\,'alert-danger')]//*[text()='There is 1 error']</name_error_message>
+		<username_error_message1 locator="xpath">//div[contains(@class\,'alert-danger')]//*[text()='Invalid email address.']</username_error_message1>
+		<password_error_message locator="xpath">//div[contains(@class\,'alert-danger')]//*[text()='Password is required.']</password_error_message>
+		<inpassword_error_message locator="xpath">//div[contains(@class\,'alert-danger')]//*[text()='Invalid password.']</inpassword_error_message>
+		<password_error_message1 locator="xpath">//div[contains(@class\,'alert-danger')]//*[text()='Password is required.']</password_error_message1>
+		<auth_error_message locator="xpath">//div[contains(@class\,'alert-danger')]//*[text()='Authentication failed.']</auth_error_message>
+
+		<username locator="id">email</username>
+		<password locator="id">passwd</password>
+		<submit locator="id">SubmitLogin</submit>
+		<logout locator="xpath"> //tagname[@title='Log me out']</logout>
+	</signin>
+</configurations>
